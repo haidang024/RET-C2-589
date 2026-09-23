@@ -1,0 +1,17 @@
+# Runtime parameters loaded by AgentRegistry and the standalone adapter.
+max_retry: 3
+timeout_s: 60
+
+max_resumes_per_batch: 50
+max_input_length: 500000
+min_jlpt_level: 0
+shortlist_size: 3
+# ikusei_shurou_rules_module: null  # Set when the 2028 rules module is available.
+
+llm_provider: "azure_openai"
+llm_model: "azure-openai-deployment"
+
+memory_enabled: false
+hitl:
+  enabled: false
+  max_hitl: 5

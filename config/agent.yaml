@@ -1,0 +1,24 @@
+# AgentRegistry discovery manifest. Runtime parameters live in config/config.yaml.
+id: "RET-C2-589"
+name: "RetailPartTimeResumeScreeningAgent"
+namespace: "agent1000"
+version: "1.0.1"
+enabled: true
+category: "Cat 2"
+generation_mode: "llm"
+industry: "RET"
+
+# Opaque compatibility metadata; this is not an inheritance selector.
+base_type: "AgentBaseGraph"
+
+# Single dotted entry point consumed by AgentRegistry.
+class: "src.graph.graph.Graph"
+
+required_trust_level: "VERIFIED_EXTERNAL"
+
+requires:
+  secrets:
+    - "AZURE_OPENAI_API_KEY"
+    - "AZURE_OPENAI_ENDPOINT"
+    - "AZURE_OPENAI_DEPLOYMENT"
+  extras: ["openai"]
